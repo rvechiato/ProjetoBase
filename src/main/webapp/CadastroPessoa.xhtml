@@ -7,78 +7,147 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
 
-
-
-<div class="row">
-		<table class="table">
-			<thead>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Cliente</td>
-					<td colspan="4"><input type="text" name="cliente"
-						class="form-control input-sm" ng-model="cliente.label" /></td>
-					<td></td>
-					<td></td>
-					<td>Grupo Economico</td>
-					<td colspan="3"><input type="text" name="grupoEconomico"
-						class="form-control input-sm" /></td>
-				</tr>
-				<tr>
-
-					<td>CNPJ</td>
-					<td><input type="text" name="CNPJ"
-						class="form-control input-sm" ng-model="cliente.cnpj" /></td>
-					<td>Trader</td>
-					<td><input type="text" name="Trader"
-						class="form-control input-sm" /></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td>Limite de Crédito</td>
-					<td><input type="text"
-						class="form-control alignRigth input-sm" value="123,36" /></td>
-					<td>Vencimento PLC</td>
-					<td><input type="text" class="form-control center input-sm" /></td>
-				</tr>
-				<tr>
-
-					<td>Rating</td>
-					<td><input type="text" class="form-control input-sm" /></td>
-					<td>Nota Suitability</td>
-					<td><input type="text" class="form-control center input-sm"
-						ng-model="cliente.notaSuitability" /></td>
-					<td>Pct Fracional</td>
-					<td><input type="text" class="form-control center input-sm"
-						ng-model="cliente.pctFracional" /></td>
-					<td></td>
-					<td>Vlr Fractional</td>
-					<td><input type="text"
-						class="form-control alignRigth input-sm" /></td>
-					<td>Prazo PLC Op</td>
-					<td><input type="text" class="form-control center input-sm" /></td>					
-				</tr>
-			</tbody>
-		</table>
+<!-- Page Start -->
+	<div class="row">
+		<div class="col-lg-12">
+			<h1 class="page-header">Cadastro Pessa</h1>
+		</div>
+		<!-- /.col-lg-12 -->
 	</div>
 
+	<div class="row">
+		<div class="col-lg-12">
 
-	<h:panelGrid>
-		<p:commandButton value="modal" type="button"
-			onclick="PF('dlg1').show();" />
-		<p:commandButton value="Basic" type="button"
-			onclick="PF('dlg2').show();" />
-	</h:panelGrid>
+			<div class="panel panel-default">
+				<div class="panel-heading">Basic Form Elements</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<form role="form">
+							
+								<div class="form-group">
+									<label>Text Input</label> 
+									<input class="form-control" />
+									<p class="help-block">Example block-level help text here.</p>
+								</div>
+								
+								<div class="form-group">
+									<label>Text Input with Placeholder</label> <input
+										class="form-control" placeholder="Enter text" />
+								</div>
+								<div class="form-group">
+									<label>Static Control</label>
+									<p class="form-control-static">email@example.com</p>
+								</div>
 
-	<p:dialog header="Modal Dialog" widgetVar="dlg1" modal="true"
-		minHeight="150">
-		<h:outputText value="Resistance to PrimeFaces is futile!" />
-	</p:dialog>
+								<div class="form-group">
+									<label>Text area</label>
+									<textarea class="form-control" rows="3" />
+								</div>
+								<div class="form-group">
+									<label>Checkboxes</label>
+									<div class="checkbox">
+										<label> <input type="checkbox" value="" />Checkbox 1
+										</label>
+									</div>
+									<div class="checkbox">
+										<label> <input type="checkbox" value="" />Checkbox 2
+										</label>
+									</div>
+									<div class="checkbox">
+										<label> <input type="checkbox" value="" />Checkbox 3
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Inline Checkboxes</label> <label class="checkbox-inline">
+										<input type="checkbox" />1
+									</label> <label class="checkbox-inline"> <input type="checkbox" />2
+									</label> <label class="checkbox-inline"> <input type="checkbox" />3
+									</label>
+								</div>
+								<div class="form-group">
+									<label>Radio Buttons</label>
+									<div class="radio">
+										<label> <input type="radio" name="optionsRadios"
+											id="optionsRadios1" value="option1" />Radio 1
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="optionsRadios"
+											id="optionsRadios2" value="option2" />Radio 2
+										</label>
+									</div>
+									<div class="radio">
+										<label> <input type="radio" name="optionsRadios"
+											id="optionsRadios3" value="option3" />Radio 3
+										</label>
+									</div>
+								</div>
+								<div class="form-group">
+									<label>Inline Radio Buttons</label> <label class="radio-inline">
+										<input type="radio" name="optionsRadiosInline"
+										id="optionsRadiosInline1" value="option1" />1
+									</label> <label class="radio-inline"> <input type="radio"
+										name="optionsRadiosInline" id="optionsRadiosInline2"
+										value="option2" />2
+									</label> <label class="radio-inline"> <input type="radio"
+										name="optionsRadiosInline" id="optionsRadiosInline3"
+										value="option3" />3
+									</label>
+								</div>
+								<div class="form-group">
+									<label>Selects</label> <select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Multiple Selects</label> <select class="form-control">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+									</select>
+								</div>
+								
+								<button type="submit" class="btn btn-default">Submit
+									Button</button>
+								<button type="reset" class="btn btn-default">Reset
+									Button</button>
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
 
-	<p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true"
-		height="100">
-		<h:outputText value="This is a Modal Dialog." />
-	</p:dialog>
-	
-	
+		</div>
+	</div>
+
+	<!-- <h:panelGrid>
+			<p:commandButton value="modal" type="button"
+				onclick="PF('dlg1').show();" />
+			<p:commandButton value="Basic" type="button"
+				onclick="PF('dlg2').show();" />
+		</h:panelGrid>
+
+		<p:dialog header="Modal Dialog" widgetVar="dlg1" modal="true"
+			minHeight="150">
+			<h:outputText value="Resistance to PrimeFaces is futile!" />
+		</p:dialog>
+
+		<p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true"
+			height="100">
+			<h:outputText value="This is a Modal Dialog." />
+		</p:dialog> -->
+
+
+
+
+
 </ui:decorate>
