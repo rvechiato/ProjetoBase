@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<ui:decorate xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
+
+
+
+<div class="row">
+		<table class="table">
+			<thead>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Cliente</td>
+					<td colspan="4"><input type="text" name="cliente"
+						class="form-control input-sm" ng-model="cliente.label" /></td>
+					<td></td>
+					<td></td>
+					<td>Grupo Economico</td>
+					<td colspan="3"><input type="text" name="grupoEconomico"
+						class="form-control input-sm" /></td>
+				</tr>
+				<tr>
+
+					<td>CNPJ</td>
+					<td><input type="text" name="CNPJ"
+						class="form-control input-sm" ng-model="cliente.cnpj" /></td>
+					<td>Trader</td>
+					<td><input type="text" name="Trader"
+						class="form-control input-sm" /></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>Limite de Crédito</td>
+					<td><input type="text"
+						class="form-control alignRigth input-sm" value="123,36" /></td>
+					<td>Vencimento PLC</td>
+					<td><input type="text" class="form-control center input-sm" /></td>
+				</tr>
+				<tr>
+
+					<td>Rating</td>
+					<td><input type="text" class="form-control input-sm" /></td>
+					<td>Nota Suitability</td>
+					<td><input type="text" class="form-control center input-sm"
+						ng-model="cliente.notaSuitability" /></td>
+					<td>Pct Fracional</td>
+					<td><input type="text" class="form-control center input-sm"
+						ng-model="cliente.pctFracional" /></td>
+					<td></td>
+					<td>Vlr Fractional</td>
+					<td><input type="text"
+						class="form-control alignRigth input-sm" /></td>
+					<td>Prazo PLC Op</td>
+					<td><input type="text" class="form-control center input-sm" /></td>					
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	<h:panelGrid>
+		<p:commandButton value="modal" type="button"
+			onclick="PF('dlg1').show();" />
+		<p:commandButton value="Basic" type="button"
+			onclick="PF('dlg2').show();" />
+	</h:panelGrid>
+
+	<p:dialog header="Modal Dialog" widgetVar="dlg1" modal="true"
+		minHeight="150">
+		<h:outputText value="Resistance to PrimeFaces is futile!" />
+	</p:dialog>
+
+	<p:dialog header="Modal Dialog" widgetVar="dlg2" modal="true"
+		height="100">
+		<h:outputText value="This is a Modal Dialog." />
+	</p:dialog>
+	
+	
+</ui:decorate>
