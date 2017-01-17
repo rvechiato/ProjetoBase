@@ -14,7 +14,7 @@ public class PessoaBean extends BaseBean<Pessoa, PessoaDAO>{
 	private PessoaDAO pessoaDAO;
 
 	public PessoaBean() {		
-		this.novo();
+		this.novo();		
 	}
 
 	@Override
@@ -22,6 +22,7 @@ public class PessoaBean extends BaseBean<Pessoa, PessoaDAO>{
 		if(this.pessoaDAO == null ){
 			this.pessoaDAO = new PessoaDAO();
 		}		
+		
 		return this.pessoaDAO;
 	}
 
