@@ -4,6 +4,7 @@ import javax.faces.bean.ManagedBean;
 
 import br.com.suitability.dao.PessoaDAO;
 import br.com.suitability.entidade.Pessoa;
+import br.com.system.core.bean.BaseBean;
 
 import javax.faces.bean.*;
 
