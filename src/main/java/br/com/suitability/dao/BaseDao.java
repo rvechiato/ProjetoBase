@@ -9,10 +9,12 @@ import br.com.suitability.exception.ErroSistema;
 import br.com.suitability.repository.RepositoryFactory;
 
 public abstract class BaseDao<E> implements IBaseDao<E> {
+	
+	private EntityManager manager;
 
 	protected void save(E entidade) throws ErroSistema {
 		try {
-			EntityManager manager = RepositoryFactory.getContext();
+			manager = RepositoryFactory.getContext();
 
 			//TODO -save or update
 			manager.getTransaction().begin();
